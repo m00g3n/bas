@@ -41,10 +41,10 @@ docker run -t --rm \
 - run benchmark from container (minikube)
 ```bash
 docker run -t --rm --network host \
-        -v ~/.minikube/ca.crt:/app/ca.crt \
-        -v ~/.minikube/client.crt:/app/client.crt \
-        -v ~/.minikube/client.key:/app/client.key \
-        --add-host=minikube:$(minikube ip)\
+        -v ~/.minikube/ca.crt:/app/ca.crt:ro \
+        -v ~/.minikube/client.crt:/app/client.crt:ro \
+        -v ~/.minikube/client.key:/app/client.key:ro \
+        -e MINIKUBE_IP=$(minikube ip) \
         -e URL="https://github.com/kyma-project/kyma/archive/0.8.1.zip" \
         -e FILTER="/docs/kyma/docs/" \
         -e ITERATION_NUMBER=1 \
