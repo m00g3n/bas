@@ -1,6 +1,6 @@
 FROM python:alpine3.7
 
-COPY start.py bas.sh requirements.txt ./app/
+COPY start.py bas.sh requirements.txt ./cfg/config ./app/
 ADD bas ./app/bas/
 
 ENV KUBECONFIG=/app/config
