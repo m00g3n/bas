@@ -1,0 +1,9 @@
+.direnv
+.idea
+.mypy_cache
+.vscode
+.git
+.envrc
+.gitignore
+Dockerfile
+tests

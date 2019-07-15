@@ -1,0 +1,6 @@
+.envrc
+.direnv
+.idea
+.mypy_cache
+.vscode
+__pycache__/
